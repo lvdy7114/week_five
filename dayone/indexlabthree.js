@@ -14,10 +14,10 @@ Your commit message should read something like: "created Hamster class".
 🟢 Normal Mode - Make sure it works so far.
 */
 class Hamster {
-  constructor(owner,name,price) {
-    this.owner = owner;
+  constructor(name) {
+    this.owner = " ";
     this.name = name;
-    this.price = price;
+    this.price = 15;
   }
   wheelRun() {
     console.log('squeak squeak');
@@ -25,8 +25,14 @@ class Hamster {
   eatFood() {
     console.log('nibble nibble');
   }
-  getPrice(price) {
-    return price;
+  getPrice() {
+   return this.price;
   }
-//newfile
+
 }
+
+const hamster = new Hamster("test");
+hamster.wheelRun();
+hamster.eatFood();
+hamster.getPrice();
+
