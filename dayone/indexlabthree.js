@@ -156,3 +156,51 @@ person.eat();person.eat();
 //Have Timmy exercise twice.
 person.eat();person.eat();
 console.log(person);
+
+/*Chefs Make Dinners
+Using the following two classes, we'll create a factory (Chefs are effectively dinner factories, after all!).
+Fill in these classes to meet the following requirements:
+Chef should be a factory of Dinner.  The factory is the dinner class. 
+🔴 Hard Mode - Save & Commit your work!
+Your commit message should read something like: "dinner is served".
+🟢 Normal Mode - Make sure it works so far.
+*/
+
+//Have the Chef create three Dinners, log the Dinners.
+class Chef { 
+  
+  //Add a method on Chef that takes three arguments and returns a new Dinner based on those arguments.
+    cooks(appetizer,entree,dessert) {
+      this.appetizer = appetizer;
+      this.entree = entree;
+      this.dessert = dessert;
+      return new Dinner();
+    }
+}
+
+//Add a constructor to Dinner that sets the string properties: appetizer, entree, and dessert.
+class Dinner {
+  constructor (appetizer,entree,dessert) {
+    this.appetizer = appetizer;
+    this.entree = entree;
+    this.dessert = dessert; 
+    this.meals = [];
+  }
+  generateDinner (appetizer, entree, dessert) {
+    const meal = new Dinner(appetizer, entree, dessert);
+    this.meals.push(meal);
+  }
+  dinnerList (index) {
+    return this.meals[index];
+  }
+
+}
+
+const chef = new Dinner('bread','pasta','cake');
+chef.generateDinner('croissant', 'raclette', 'chantilly cream');
+chef.generateDinner('crab ragoon', 'pad thai', 'mango with coconut');
+chef.generateDinner('breadsticks', 'lasagna', 'tiramisu');
+chef.generateDinner('french fries', 'burger', 'milkshake');
+console.log(chef);
+console.log(chef.dinnerList(0));
+
