@@ -13,9 +13,10 @@ getPrice() - return the price.
 Your commit message should read something like: "created Hamster class".
 🟢 Normal Mode - Make sure it works so far.
 */
+//Set Gus's owner to the string "Timmy." 
 class Hamster {
   constructor(name) {
-    this.owner = " ";
+    this.owner = "Timmy";
     this.name = name;
     this.price = 15;
   }
@@ -31,10 +32,9 @@ class Hamster {
 
 }
 
-const hamster = new Hamster("test");
-hamster.wheelRun();
-hamster.eatFood();
-hamster.getPrice();
+//hamster.wheelRun();
+//hamster.eatFood();
+//hamster.getPrice();
 
 /*Person Class
 Create a Person class with the following requirements met:
@@ -94,17 +94,65 @@ class Person {
   }
   buyHamster(hamster) {
     this.hamsters.push(hamster); this.mood += 10; 
-    this.bankAccount - this.price; //getPrice() returns an error.. ? 
+    this.bankAccount -= hamster.getPrice(); 
   }
 
 }
 
-const person = new Person("test");
-person.getName();
-person.getAge();
-person.getWeight();
-person.greet();
-person.eat();
-person.exercise();
+//person.getName();
+//person.getAge();
+//person.getWeight();
+//person.greet();
+//person.eat();
+//person.exercise();
+//person.ageUp();
+
+
+/*Create a Story
+Feel free to update or add methods to automate some of these tasks.
+At this point, Timmy's a little bummed. As a precocious child, he feels he's "seen it all" already. 
+Now Timmy's a little heavier than he wants to be. Kindergarten's coming up and he wants to look good. 
+
+🔴 Hard Mode - Save & Commit your work!
+Your commit message should read something like: "created Timmy's story".
+🟢 Normal Mode - Make sure it works so far.
+*/
+//Instantiate a new Person named Timmy.
+const person = new Person("Timmy");
+//Age Timmy five years.
 person.ageUp();
-person.buyHamster();
+person.ageUp();
+person.ageUp();
+person.ageUp();
+person.ageUp(); 
+//Have him eat five times to improve his mood.
+person.eat();
+person.eat();
+person.eat();
+person.eat();
+person.eat();
+//Have him exercise five times.
+person.exercise();
+person.exercise();
+person.exercise();
+person.exercise();
+person.exercise();
+//Age Timmy 9 more years.
+person.ageUp();person.ageUp();person.ageUp();
+person.ageUp();person.ageUp();person.ageUp();
+person.ageUp();person.ageUp();person.ageUp();
+//Create a Hamster named "Gus."
+const hamster = new Hamster("Gus");
+//Set Gus's owner to the string "Timmy." 
+//put his name in the object
+//Have Timmy "buy" Gus.
+person.buyHamster(hamster);
+//Age Timmy more 15 years.
+person.ageUp();person.ageUp();person.ageUp();person.ageUp();person.ageUp();
+person.ageUp();person.ageUp();person.ageUp();person.ageUp();person.ageUp();
+person.ageUp();person.ageUp();person.ageUp();person.ageUp();person.ageUp();
+//Have Timmy eat twice.
+person.eat();person.eat();
+//Have Timmy exercise twice.
+person.eat();person.eat();
+console.log(person);
