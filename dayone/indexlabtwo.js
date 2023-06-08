@@ -106,6 +106,48 @@ chef1.explainChef();
 
 /*One Step Further- This section is optional, but complete it if you have the time.
 Create the following classes using the given information.
+
+Class	Derived From	Properties	Methods
+BankAccount	n/a	ownerName, balance, acctNum	deposit, withdraw
+CheckingAccount	BankAccount	overdraftEnabled	Override withdraw to implement an overdraft feature.
+SavingsAccount	BankAccount	None	Override withdraw to disallow withdrawals completely.
+acctNum should be generated within the constructor of BankAccount, not passed in as an argument.
 */
 
-//bank account activity. Will work on this if time allows. 
+//bank account activity.
+
+class BankAccount {
+  //properties
+  constructor(ownerName, balance, acctNum) {
+    this.ownerName = ownerName;
+    this.balance = balance;
+    this.acctNum = acctNum;
+  }
+    //methods
+    deposit() {
+      balance++;
+
+    }
+    withdraw() {
+      balance--;
+
+    }
+  }
+
+class CheckingAccount extends BankAccount {
+  constructor(overdraftEnabled) {
+    super(ownerName, balance, acctNum);
+    this.ownerName = this.ownerName;
+    this.balance = this.balance;
+    this.acctNum = this.acctNum;
+    this.overdraftEnabled = overdraftEnabled;  
+  }
+
+  //method - Override withdraw to implement an overdraft feature.
+}
+
+class SavingsAccount extends BankAccount {
+  //method Override withdraw to disallow withdrawals completely.
+}
+
+//acctNum should be generated within the constructor of BankAccount, not passed in as an argument.
