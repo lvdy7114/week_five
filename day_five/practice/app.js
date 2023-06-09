@@ -56,4 +56,4 @@ child.addEventListener("click", function() {
     console.log("child")
 });
 
-btn.removeEventListener('click', handleClick);
+btn.removeEventListener('click', handleClick); //doesn't work.. research
