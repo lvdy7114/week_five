@@ -93,6 +93,7 @@ Remove the active class from the clicked <a> element.
 Set the showingSubMenu to false.
 Set the CSS top property of subMenuEl to 0.
 return to exit the handler.
+12. in here
 13. in here
 14. for loop
 15. in here
@@ -158,7 +159,7 @@ subMenuEl.addEventListener('click',function(event) {
 
 function updateMainContent() {
   mainEl = document.getElementsByTagName('h1');
-  const aboutHeader = document.createTextNode( "About" );  //not in h1, but close. tried using innerhtml, keep getting errors.
+  const aboutHeader = document.createTextNode("About");  //not in h1, but close. tried using innerhtml, nothing happens
   mainE1.innerHTML = ' ';
   mainE1.appendChild(aboutHeader);
   
